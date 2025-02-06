@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habibi Café & Bakery</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9; /* Light gray background */
+            color: #333333; /* Dark gray text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        h1, h2 {
+            color: #333333; /* Dark gray headings */
+            text-align: center;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555555; /* Medium gray for descriptions */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #ff9f00, #cc7a00); /* Gradient orange background */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            width: 100%;
+        }
+        .header h1 {
+            color: white; /* White text on orange background */
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .header p {
+            color: white; /* White text on orange background */
+            font-size: 1.2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            background-color: #ffffff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            text-align: center;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Product Section */
+        .product-section {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            background-color: #ffffff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .product-item {
+            text-align: center;
+            border: 1px solid #e0e0e0; /* Light gray border */
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #ffffff; /* White background */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-item img {
+            width: 100%;
+            height: 150px; /* Increased image height */
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Form Section */
+        .form-section {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #ffffff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 5px;
+            color: #333333; /* Dark gray labels */
+            width: 100%;
+            text-align: left;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #ffffff; /* White input fields */
+            color: #333333; /* Dark gray text */
+        }
+        button {
+            background-color: #ff9f00; /* Bright orange button */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 12px;
+            width: 100%;
+            transition: background-color 0.2s ease-in-out;
+        }
+        button:hover {
+            background-color: #cc7a00; /* Darker orange on hover */
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333333; /* Dark gray background */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        footer a {
+            color: #ff9f00; /* Orange link */
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Habibi Café & Bakery</h1>
+        <p>Your Sweet Treats Delivered!</p>
+        <p>Welcome to Habibi Café & Bakery! We specialize in delicious baklava, kunafah, and more.</p>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="images/banner.jpg" alt="Bakery Banner"> <!-- Replace with your banner image -->
+        <h2>Order Now and Enjoy Freshness at Your Doorstep!</h2>
+        <p>Place your order today and experience the taste of our handmade treats.</p>
+    </div>
+
+    <!-- Product Section -->
+    <div class="product-section">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="images/baklava-mixed.jpg" alt="Baklava Mixed"> <!-- Replace with your image -->
+                <p>Baklava Mixed<br>Per kg: Ksh 3,500</p>
+            </div>
+            <div class="product-item">
+                <img src="images/baklava-almond.jpg" alt="Baklava Almond"> <!-- Replace with your image -->
+                <p>Baklava Almond<br>Per kg: Ksh 3,400</p>
+            </div>
+            <div class="product-item">
+                <img src="images/baklava-pistachio.jpg" alt="Baklava Pistachio"> <!-- Replace with your image -->
+                <p>Baklava Pistachio<br>Per kg: Ksh 4,000</p>
+            </div>
+            <div class="product-item">
+                <img src="images/baklava-walnut.jpg" alt="Baklava Walnut"> <!-- Replace with your image -->
+                <p>Baklava Walnut<br>Per kg: Ksh 3,400</p>
+            </div>
+            <div class="product-item">
+                <img src="images/baklava-coconut.jpg" alt="Baklava Coconut"> <!-- Replace with your image -->
+                <p>Baklava Coconut<br>Per kg: Ksh 2,800</p>
+            </div>
+            <div class="product-item">
+                <img src="images/kunafah-cream-cheese.jpg" alt="Kunafah Cream Cheese"> <!-- Replace with your image -->
+                <p>Kunafah Cream Cheese<br>Per kg: Ksh 2,000</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section">
+        <h2>Place Your Order</h2>
+        <p style="color: red; text-align: center; margin-bottom: 20px;">
+            After clicking "Submit Order," please review and send the message via WhatsApp.
+        </p>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="product">Product:</label>
+            <select id="product" name="product" required>
+                <option value="">--Select Product--</option>
+                <option value="Baklava Mixed">Baklava Mixed (Ksh 3,500)</option>
+                <option value="Baklava Almond">Baklava Almond (Ksh 3,400)</option>
+                <option value="Baklava Pistachio">Baklava Pistachio (Ksh 4,000)</option>
+                <option value="Baklava Walnut">Baklava Walnut (Ksh 3,400)</option>
+                <option value="Baklava Coconut">Baklava Coconut (Ksh 2,800)</option>
+                <option value="Kunafah Cream Cheese">Kunafah Cream Cheese (Ksh 2,000)</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="payment">Payment Method (M-Pesa):</label>
+            <input type="text" id="payment" name="payment" placeholder="Enter M-Pesa Code">
+
+            <label for="message">Special Requests:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Habibi Café & Bakery. All rights reserved.</p>
+        <p>Connect with us:</p>
+        <a href="https://wa.me/+254742375005" target="_blank">WhatsApp</a> |
+        <a href="https://instagram.com/your_instagram" target="_blank">Instagram</a> |
+        <a href="https://facebook.com/your_facebook" target="_blank">Facebook</a>
+    </footer>
+
+    <!-- JavaScript Code -->
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const product = document.getElementById('product').value;
+            const quantity = document.getElementById('quantity').value;
+            const payment = document.getElementById('payment').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !phone || !product || !quantity) {
+                alert("Please fill out all required fields!");
+                return;
+            }
+
+            const orderDetails = `*New Order Received!*\n\nName: ${name}\nPhone: ${phone}\nProduct: ${product}\nQuantity: ${quantity}\nPayment (M-Pesa): ${payment}\nMessage: ${message}`;
+
+            const whatsappUrl = `https://wa.me/+254742375005?text=${encodeURIComponent(orderDetails)}`;
+            window.open(whatsappUrl, '_blank'); // Open WhatsApp with pre-filled message
+        });
+    </script>
+</body>
+</html>
